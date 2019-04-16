@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -744,11 +744,19 @@ function About() {
     },
     __self: this
   }, "This is the about page"));
-}
+} // import Header from '../components/Header'
+// export default function About() {
+//   return (
+//     <div>
+//       <About />
+//       <p>This is the about page</p>
+//     </div>
+//   )
+// }
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/about.js ***!
   \******************************/

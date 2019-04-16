@@ -9618,7 +9618,15 @@ function About() {
     },
     __self: this
   }, "This is the about page"));
-}
+} // import Header from '../components/Header'
+// export default function About() {
+//   return (
+//     <div>
+//       <About />
+//       <p>This is the about page</p>
+//     </div>
+//   )
+// }
 
 /***/ }),
 
