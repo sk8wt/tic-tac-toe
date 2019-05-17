@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
+class Square extends React.Component {    //this is a WHOLE class
+
+
+
+
+
+
     render() {
 	return (
-      <button className="square">
-	     {this.props.value}
+      <button className="square" onClick={() => alert("should be x") }>
+	     {this.props.value}    //passing props/objects from Board to Square apps
       </button>
 		);
     }
