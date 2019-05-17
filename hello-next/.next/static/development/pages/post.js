@@ -9684,7 +9684,7 @@ var Page = function Page(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fpost&absolutePagePath=%2FUsers%2Fsimmybhatia%2FCS%2Ftic-tac-toe%2Fhello-next%2Fpages%2Fpost.js ***!
   \*********************************************************************************************************************************************/
@@ -9707,5 +9707,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]));;
+},[[1,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=post.js.map
