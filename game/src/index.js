@@ -11,6 +11,7 @@ function Square(props) {
 	);
 }
 
+//Tic-Tac-Toe Game
 class Board extends React.Component {
 
   constructor(props) {
@@ -23,7 +24,7 @@ class Board extends React.Component {
 
  renderSquare(i) {
     return (
-      <Square
+      <Square 
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
@@ -31,7 +32,6 @@ class Board extends React.Component {
   }
 
   render() {
-
   	return (
         <div>
           <div className="board-row">
@@ -51,7 +51,7 @@ class Board extends React.Component {
           </div>
         </div>
   		);
-      }
+    }
 }
 
 class Game extends React.Component {
@@ -110,7 +110,6 @@ class Game extends React.Component {
 
 
       let status;
-      console.log("winner: ", winner);
       if (winner) {
         status = 'Winner: ' + winner; 
       } else if (!winner && this.state.stepNumber === 9){
@@ -121,7 +120,7 @@ class Game extends React.Component {
       }
 
       return (
-          <div className="game" style={{ padding: "10% 35%", textAlign: "center" }}>
+          <div className="game" style={{ padding: "15% 35% 33%", maxHeight: "100px", textAlign: "center", backgroundColor: "pink"}}>
             <div className="game-board">
               <h1 style = {{ textAlign: "center" }}>Tic-Tac-Toe</h1>
               <Board 
@@ -140,16 +139,14 @@ class Game extends React.Component {
 
 
 
-
-
-
+//Rendering application
 ReactDOM.render(
 		<Game />,
 		document.getElementById('root')
 		);
 
 
-
+//Logic for determining winner
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
@@ -171,8 +168,9 @@ function calculateWinner(squares) {
   return null;
 }
 
+//FIX THIS 
 function highlightSquares(cells){
-  console.log(cells);
+  return <h1 style = {{ backgroundColor: "red"}}> cells </h1>
 }
 
 
