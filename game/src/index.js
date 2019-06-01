@@ -120,14 +120,15 @@ class Game extends React.Component {
       }
 
       return (
-          <div className="game">
+          <div className="game" style={{ padding: "10% 35%", textAlign: "center" }}>
             <div className="game-board">
+              <h1 style = {{ textAlign: "center" }}>Tic-Tac-Toe</h1>
               <Board 
                 squares = {current.squares}
                 onClick = {(i) => this.handleClick(i)}
               />
             </div>
-            <div className="game-info">
+            <div className="game-info" style={{ padding: "5%" }}>
               <div> { status } </div>
               <ol>{ moves }</ol>
             </div>
