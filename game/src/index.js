@@ -110,6 +110,7 @@ class Game extends React.Component {
 
 
       let status;
+      console.log("winner: ", winner);
       if (winner) {
         status = 'Winner: ' + winner; 
       } else if (!winner && this.state.stepNumber === 9){
@@ -163,10 +164,15 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      highlightSquares(lines[i]);
       return squares[a];
     }
   }
   return null;
+}
+
+function highlightSquares(cells){
+  console.log(cells);
 }
 
 
