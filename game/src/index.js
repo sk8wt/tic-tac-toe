@@ -79,6 +79,7 @@ class Game extends React.Component {
       this.setState({
         history: history.concat([{
           squares: squares,
+          cur_move: i,
         }]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
@@ -100,10 +101,17 @@ class Game extends React.Component {
       const winner = calculateWinner(current.squares);
 
       const moves = history.map((step, move) => {
-        const desc = move ? 'Go to move #: ' + move : 'Go to game start';
+        const cur_move = step.cur_move;
+        const row = 1 + (Math.floor(cur_move / 3));
+        const col = 1 + (cur_move % 3);
+
+
+        const desc = move ? 'Go to move #: ' + move + " (" + col + ", " + row + ")" : 'Go to game start';
         return (
           <li key= {move}> 
-            <button onClick = {() => this.jumpTo(move)}> {desc}</button>
+           <button
+              onClick={() => this.jumpTo(move)}>{desc}
+            </button>
           </li>
         );
       });
@@ -161,16 +169,10 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      highlightSquares(lines[i]);
       return squares[a];
     }
   }
   return null;
-}
-
-//FIX THIS 
-function highlightSquares(cells){
-  return <h1 style = {{ backgroundColor: "red"}}> cells </h1>
 }
 
 
