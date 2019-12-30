@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "next start",
+    "build": "next build",
+    "now-build": "next build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
